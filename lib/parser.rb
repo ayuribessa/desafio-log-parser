@@ -11,7 +11,7 @@ class Parser
   end
 
   def print_first_line()
-    puts @first_line
+    @first_line
   end
 
 end
