@@ -1,4 +1,4 @@
-require_relative "parser"
+require_relative "./lib/parser"
 
 file_name = 'games.log'
 parser = Parser.new()

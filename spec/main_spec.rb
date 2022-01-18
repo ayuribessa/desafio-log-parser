@@ -1,6 +1,5 @@
 require_relative "../lib/parser"
 
-
 describe Parser do
 
 	context " When testing the Parser classe" do
@@ -11,7 +10,7 @@ describe Parser do
 
      it "Should print this text in the first line " do
          parser = Parser.new()
-         parser.open_file('test.log')
+         parser.open_file('games.log')
          first_line = parser.print_first_line
          expect(first_line).to eq("  0:00 ------------------------------------------------------------")
 	  end
