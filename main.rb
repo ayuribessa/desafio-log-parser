@@ -1,6 +1,7 @@
-first_line = nil
-File.open('./games.log') do |file| # abre o arquivo
-  first_line = file.readline.chomp
-end # fecha ao terminar
+require_relative "parser"
 
-puts "#{first_line}"
+file_name = 'games.log'
+parser = Parser.new()
+parser.open_file(file_name)
+puts parser.print_first_line
+
