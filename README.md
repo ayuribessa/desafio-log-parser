@@ -15,7 +15,7 @@ A projetct to parse a log file extracted from a Quake 3 game
   rvm install ruby 3.1.0
   ```
 * Bundler
-  To install Bundler, run:
+  * To install Bundler, run:
    ```
    gem install bundler
    ```
