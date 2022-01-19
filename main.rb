@@ -1,7 +1,7 @@
 require_relative "./lib/parser"
 
 file_name = 'games.log'
-parser = Parser.new()
-parser.open_file(file_name)
+parser = Parser.new(file_name)
 puts parser.print_first_line
+parser.close_file
 
