@@ -7,7 +7,7 @@ describe '#open_file' do
     end
   end
 end
-  
+
 describe '#print_first_line' do
   context "when priting the first line of the file" do
     it "Print this text " do
