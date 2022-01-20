@@ -3,8 +3,8 @@ require_relative "../lib/parser"
 describe '#open_file' do
   context " When loaded wrong file name or path " do
 	  it "Print an error message " do
-	    expect{ Parser.new('wrong_file.log')}.to raise_error("File not found")
-	  end
+      expect{ Parser.new('wrong_file.log')}.to raise_error(Errno::ENOENT)
+    end
   end
 end
   
