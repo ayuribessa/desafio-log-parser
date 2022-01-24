@@ -4,7 +4,7 @@ class Parser
 
   def initialize(file_name)    
     @file_name = file_name
-    File.exists?(@file_name)
+    File.exist?(@file_name)
     @file = File.open(@file_name)
 
   end
@@ -18,15 +18,11 @@ class Parser
   end
 
   def number_of_lines
-    @lines = @file.count 
+    @file.count 
   end
 
   def json_format
-    number_of_lines()
-    object = { "#{@file_name}" => {"lines" => @lines } }
-    json = object.to_json
-    # json = JSON.pretty_generate(object)
-    return json
+    object = { "#{@file_name}" => { 'lines' => number_of_lines } }
+    object.to_json
   end
 end
-
