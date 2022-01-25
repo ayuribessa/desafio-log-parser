@@ -14,7 +14,7 @@ describe Parser do
       it "Print this text " do
         parser = Parser.new('test.log')
         first_line = parser.print_first_line
-        expect(first_line).to eq("  0:00 ------------------------------------------------------------")
+        expect(first_line).to eq '  0:00 ------------------------------------------------------------'
   	  end
     end
   end
