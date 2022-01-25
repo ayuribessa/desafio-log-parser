@@ -29,9 +29,9 @@ A projetct to parse a log file extracted from a Quake 3 game
    
 2. To run the tests, type:
     ```
-    rspec
+    rspec spec/main_spec.rb
     ```
 3. To run the application, do:
     ```
-    ruby main.rb
+    ruby main.rb -n "arquivo_de_log"
     ```
