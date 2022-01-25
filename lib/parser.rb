@@ -6,7 +6,6 @@ class Parser
     @file_name = file_name
     File.exist?(@file_name)
     @file = File.open(@file_name)
-
   end
 
   def print_first_line
