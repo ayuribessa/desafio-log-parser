@@ -1,7 +1,11 @@
-require_relative "./lib/parser"
+require_relative './lib/parser'
+require 'optparse'
 
-file_name = 'games.log'
-parser = Parser.new(file_name)
-puts parser.print_first_line
+option = {}
+OptionParser.new do |opts|
+  opts.banner = 'Usage: main.rb [options]'
+  opts.on('-n FILENAME', '--file-name FILENAME', 'Log file to parse') { |f| option[:file_name] = f }
+end
+parser = Parser.new(option[:file_name])
+puts parser.json_format
 parser.close_file
-
